@@ -3,9 +3,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { AddressModule } from './address/address.module';
 import { ContactModule } from './contact/contact.module';
+import { AuthModule } from './auth/auth.module';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
+    JwtModule.register({
+      secret: "sectring", signOptions: {
+        expiresIn: "7d",
+      },
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: '127.0.0.1',
@@ -19,6 +26,7 @@ import { ContactModule } from './contact/contact.module';
     UserModule,
     AddressModule,
     ContactModule,
+    AuthModule,
   ],  
 })
 export class AppModule {}
