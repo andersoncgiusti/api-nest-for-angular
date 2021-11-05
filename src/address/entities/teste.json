@@ -1,0 +1,18 @@
+{
+    "id": 2,
+    "name": "Anderson",
+    "email": "anderson@gmail.com",
+    "password": 123,
+    "address": {
+        "street": "Av. Odair Santanelli",
+        "city": "Guarulhos",
+        "state": "SP",
+        "zipcode": "07190050"
+    },
+    "contact": {
+        "type": "adm",
+        "contact": "1190909090"
+
+    }
+}
+
